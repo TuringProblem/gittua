@@ -69,17 +69,17 @@ let addCloneURL () =
   else
     print_endline (red ^ "✗ Clone failed. Please check the repository URL and your permissions." ^ reset)
 
-let display_menu () =
-  print_endline (bold ^ "\n╭───── Available Commands ─────╮" ^ reset);
-  print_endline (bold^ cyan ^ " cl " ^ reset ^ "- Clone Repository");
-  print_endline (cyan ^ " u " ^ reset ^ "- Update Current Repo");
-  print_endline (cyan ^ " s " ^ reset ^ "- Show Status");
-  print_endline (cyan ^ " b " ^ reset ^ "- Branch Management");
-  print_endline (red ^ " q " ^ reset ^ "- Quit");
-  print_endline (bold ^ "╰──────────────────────────────╯" ^ reset);;
+let display_menu() =
+  print_endline(bold ^ "\n╭───── Available Commands ─────╮" ^ reset);
+  print_endline(bold^ cyan ^ " cl " ^ reset ^ "- Clone Repository");
+  print_endline(cyan ^ " u " ^ reset ^ "- Update Current Repo");
+  print_endline(cyan ^ " s " ^ reset ^ "- Show Status");
+  print_endline(cyan ^ " b " ^ reset ^ "- Branch Management");
+  print_endline(red ^ " q " ^ reset ^ "- Quit");
+  print_endline(bold ^ "╰──────────────────────────────╯" ^ reset);;
 
 let showStatus() =
-  print_endline (yellow ^ "\n📊 Current Repository Status:" ^ reset);
+  print_endline(yellow ^ "\n📊 Current Repository Status:" ^ reset);
   ignore (Sys.command "git status");;
 
 let branch_management () =
