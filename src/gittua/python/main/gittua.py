@@ -24,6 +24,11 @@ def branch():
     return 0
 
 
+def commandBox():
+    print("┌─────────── Enter Command ───────────┐")
+    usrInput: str = str(input("| "))
+
+
 git = lambda x: gitTua(gitBlank, x)
 
 commands = {
@@ -36,6 +41,8 @@ commands = {
     "help": git("-help"),
 }
 
+
+
 print("Testing:\n")
 
 print(commands["b"])
@@ -45,3 +52,4 @@ print(commands["a"])
 print(commands["fa"])
 print(commands["help"])
 print(commands["cl"])
+commandBox()
